@@ -4,6 +4,12 @@ import numpy as np
 import plotly.express as px
 import time
 
+st.set_page_config(
+    page_title="Data Visualization",  
+    page_icon="icon.png",            
+    layout="wide"              
+)
+
 st.header("Data Visualization App")
 
 @st.cache_data

@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import time
-
 st.set_page_config(
     page_title="Data Visualization",  
     page_icon="icon.png",            
@@ -37,7 +35,6 @@ if file is not None:
     with tap1:
       col1,col2,col3=st.columns(3)
       with st.spinner('Generating plot...'):
-       time.sleep(2)
        with col1:
         x_axis=st.selectbox("Select X-axis",numerical_columns)
        with col2:
@@ -52,7 +49,6 @@ if file is not None:
     with tap2:
      hist_col1, hist_col2=st.columns(2)
      with st.spinner('Generating plot...'):
-       time.sleep(2)
        with hist_col1:
         hist_feature=st.selectbox("Select feature for histogram",numerical_columns)
        with hist_col2:
@@ -64,7 +60,6 @@ if file is not None:
     with tap3:
      box_col1, box_col2=st.columns(2)
      with st.spinner('Generating plot...'):
-       time.sleep(2)
        with box_col1:
         box_y=st.selectbox("Select Y-axis for box plot",numerical_columns)
        with box_col2:
@@ -76,7 +71,6 @@ if file is not None:
     with tap4:
      line_col1, line_col2=st.columns(2)
      with st.spinner('Generating plot...'):
-       time.sleep(2)
        with line_col1:
         line_x=st.selectbox("Select X-axis for line plot",numerical_columns)
        with line_col2:
@@ -88,7 +82,6 @@ if file is not None:
     with tap5:
      bar_col1, bar_col2=st.columns(2)
      with st.spinner('Generating plot...'):
-       time.sleep(2)
        with bar_col1:
         bar_x=st.selectbox("Select X-axis for bar plot",all_columns)
        with bar_col2:

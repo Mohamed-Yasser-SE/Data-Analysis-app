@@ -206,8 +206,6 @@ if file is not None:
     with mtab:
       
      st.header("Machine Learning Modeling")
-
-     from sklearn.model_selection import train_test_split
      from sklearn.linear_model import LogisticRegression
      from sklearn.ensemble import RandomForestClassifier
      from sklearn.ensemble import RandomForestRegressor

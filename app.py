@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"              
 )
 
-st.header("Data Visualization App")
+st.header("Data Science App")
 
 # Load Data
 

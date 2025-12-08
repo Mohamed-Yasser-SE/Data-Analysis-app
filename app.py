@@ -7,8 +7,32 @@ st.set_page_config(
     page_icon="icon.png",            
     layout="wide"              
 )
+st.header("👋 Welcome to Data Science App")
+column1,column2=st.columns([6,2])
+with column1:
+    st.markdown("""
+    <div style="font-size:28px; line-height:1.8;">
 
-st.header("Data Science App")
+    <strong>The ultimate data playground!</strong><br>╰(\*° ▽ °\*)╯<br><br>
+
+    I’m Mohamed Yasser — a Data Science student 👨‍💻<br>
+    This app will help you:<br>
+
+    📊 Analyze your data<br>
+    🧼 Clean the chaos<br>
+    🙉 Train machine learning models<br>
+    🔮 Predict the future (almost)<br><br>
+
+    ⚠️ Warning: If you’re a Data Science student, your assignments might suddenly become a lot easier 😎
+    <br>
+    Upload your data and watch the magic happen
+    <br> (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+    </div>
+    """, unsafe_allow_html=True)
+with column2:
+    st.image("./images./1.jpg",width=500)
+
+
 
 # Load Data
 
@@ -16,9 +40,11 @@ st.header("Data Science App")
 def load_data(file):
     return pd.read_csv(file)
 
-file=st.file_uploader("Upload a CSV file",type=["csv"])
-if 'df' not in st.session_state:
-    st.session_state.df=None
+ccol1,ccol2,ccol3=st.columns([1,6,1])
+with ccol2:
+    file=st.file_uploader("",type=["csv"])
+    if 'df' not in st.session_state:
+        st.session_state.df=None
 
 if file is not None:
     data=load_data(file)
@@ -41,12 +67,15 @@ if file is not None:
     with fstab:
      number_of_rows=st.session_state.df.shape[0]
      number_of_columns=st.session_state.df.shape[1]
-     st.write(f"Dataset contains {number_of_rows} rows and {number_of_columns} columns.")
-     fs1,fs2=st.columns(2)
+     fs1,fs2,fs3=st.columns([6,1,4])
      with fs1:
+      st.write(f"Dataset contains {number_of_rows} rows and {number_of_columns} columns.")
+     
       n_rows=st.number_input("Enter number of rows to display",min_value=1,max_value=number_of_rows,value=number_of_rows,step=1)
-     with fs2:
       columns=st.multiselect("Select columns to display",st.session_state.df.columns.tolist(),default=st.session_state.df.columns.tolist())
+     with fs3:
+      st.image("./images./data.jpg",width=500)
+      
      st.dataframe(st.session_state.df)
      if st.button("Apply Selection"):
       if len (st.session_state.df)!=n_rows:
@@ -58,7 +87,11 @@ if file is not None:
      
 
     with dctab:
-     natab,duplicatstab,outliertab=st.tabs(["NA","Duplicsts","outliers"])
+     fs1,fs2,fs3=st.columns([4,2,2])
+     with fs3:
+      st.image("./images./clean.jpg",width=700)
+     with fs1:
+      natab,duplicatstab,outliertab=st.tabs(["NA","Duplicsts","outliers"])
      with natab:
         na_counts=st.session_state.df.isna().sum()
         na_counts=na_counts[na_counts>0]
@@ -139,9 +172,50 @@ if file is not None:
      
 
     with dvtab:
+       imagcol1,imagecol2,imagcol3=st.columns([2,2,2])
+       with imagecol2:
+
+            st.image("./images./visual.jpg",width=300)
+       st.markdown("""
+        <div style="font-size:24px; line-height:1.8;">
+
+        <strong>📊 When to Use Each Plot (☞ﾟヮﾟ)☞</strong>
+        </div>""", unsafe_allow_html=True)
+       dvcol1,dvcol2,dvcol3=st.columns(3)
+       with dvcol1:
+         st.markdown("""<div style="font-size:21px; line-height:1.8;">
+ 🔹 Scatter Plot<br>
+ Use it when you want to see if two variables are secretly in a relationship 👀<br>
+ Perfect for: Discovering correlations and trends between numbers.<br><br>
+
+ 🔹 Histogram<br>
+ Use it when you want to know how your data is distributed — who’s common and who’s rare 🧠<br>
+ Perfect for: Understanding frequency and data spread.
+                     
+</div>""", unsafe_allow_html=True)
+       with dvcol2:
+         st.markdown("""<div style="font-size:21px; line-height:1.8;">
+  🔹 Box Plot<br>
+Use it when you want to expose the troublemakers (outliers) in your data 😈<br>
+ Perfect for: Comparing distributions and detecting weird values.<br><br>
+
+🔹 Line Plot<br>
+Use it when your data loves telling stories over time ⏳<br>
+Perfect for: Trends, time series, and tracking changes.                    
+                     </div>""", unsafe_allow_html=True)
+       with dvcol3:
+         st.markdown("""<div style="font-size:21px; line-height:1.8;">
+  🔹 Bar Plot<br>
+ Use it when you want to compare categories like a boss 💪<br>
+Perfect for: Comparing quantities across different groups.
+                    </div>""", unsafe_allow_html=True)
+       
+
        numerical_columns=st.session_state.df.select_dtypes(include=np.number).columns.tolist()
        all_columns=st.session_state.df.columns.tolist()
 
+    
+       
        tap1,tap2,tap3,tap4,tap5=st.tabs(["Scatter Plot","Histogram","Box Plot","Line Plot","Bar Plot"])
 
 
@@ -237,6 +311,21 @@ if file is not None:
 
             ax.set_title("Correlation Heatmap")
             st.pyplot(fig)
+     with mcol2:
+       st.image("./images./ML.jpg",width=600)
+       st.markdown("""
+       <div style="font-size:18px; line-height:1.8;">
+                   ⚠️ Heads up, data explorer! 😅<br>
+
+You’ve got Logistic Regression, Random Forest Classifier, Random Forest Regressor, and Support Vector Machine waiting for you.
+Before you jump in:<br>
+
+* If your target is **categories** (like Yes/No, Class A/B), pick a **Classification model** ✅ (Logistic Regression, Random Forest Classifier, Support Vector Machine)<br>
+* If your target is **numbers** (like price, salary, temperature), pick a **Regression model** 📈 (Random Forest Regressor)<br>
+
+Using classification data on a regression model? That’s like trying to teach a cat to fetch your coffee 🐱☕<br>
+Choose wisely or face the errors! ☠💥
+         </div>""", unsafe_allow_html=True)
 
      df_model =st.session_state.df.copy()
      ml1col1, ml2col2 = st.columns(2)

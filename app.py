@@ -30,7 +30,7 @@ with column1:
     </div>
     """, unsafe_allow_html=True)
 with column2:
-    st.image("./images./1.jpg",width=500)
+    st.image("./images/1.jpg",width=500)
 
 
 
@@ -74,7 +74,7 @@ if file is not None:
       n_rows=st.number_input("Enter number of rows to display",min_value=1,max_value=number_of_rows,value=number_of_rows,step=1)
       columns=st.multiselect("Select columns to display",st.session_state.df.columns.tolist(),default=st.session_state.df.columns.tolist())
      with fs3:
-      st.image("./images./data.jpg",width=500)
+      st.image("./images/data.jpg",width=500)
       
      st.dataframe(st.session_state.df)
      if st.button("Apply Selection"):
@@ -89,7 +89,7 @@ if file is not None:
     with dctab:
      fs1,fs2,fs3=st.columns([4,2,2])
      with fs3:
-      st.image("./images./clean.jpg",width=700)
+      st.image("./images/clean.jpg",width=700)
      with fs1:
       natab,duplicatstab,outliertab=st.tabs(["NA","Duplicsts","outliers"])
      with natab:
@@ -175,7 +175,7 @@ if file is not None:
        imagcol1,imagecol2,imagcol3=st.columns([2,2,2])
        with imagecol2:
 
-            st.image("./images./visual.jpg",width=300)
+            st.image("./images/visual.jpg",width=300)
        st.markdown("""
         <div style="font-size:24px; line-height:1.8;">
 
@@ -312,7 +312,7 @@ Perfect for: Comparing quantities across different groups.
             ax.set_title("Correlation Heatmap")
             st.pyplot(fig)
      with mcol2:
-       st.image("./images./ML.jpg",width=600)
+       st.image("./images/ML.jpg",width=600)
        st.markdown("""
        <div style="font-size:18px; line-height:1.8;">
                    ⚠️ Heads up, data explorer! 😅<br>

@@ -314,7 +314,7 @@ Perfect for: Comparing quantities across different groups.
      with mcol2:
        st.image("./images/ML.jpg",width=200)
        st.markdown("""
-       <div style="font-size:18px; line-height:1.8;">
+       <div style="font-size:14px; line-height:1.8;">
                    ⚠️ Heads up, data explorer! 😅<br>
 
 You’ve got Logistic Regression, Random Forest Classifier, Random Forest Regressor, and Support Vector Machine waiting for you.
@@ -452,3 +452,4 @@ st.markdown(
 
 
    
+

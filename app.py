@@ -11,9 +11,9 @@ st.header("👋 Welcome to Data Science App")
 column1,column2=st.columns([6,2])
 with column1:
     st.markdown("""
-    <div style="font-size:22px; line-height:1.8;">
+    <div style="font-size:17px; line-height:1.8;">
 
-    <strong>The ultimate data playground!</strong><br>╰(\*° ▽ °\*)╯<br><br>
+    <strong>The ultimate data playground!</strong><br>╰(\*° ▽ °\*)╯<br>
 
     I’m Mohamed Yasser — a Data Science student 👨‍💻<br>
     This app will help you:<br>
@@ -21,7 +21,7 @@ with column1:
     📊 Analyze your data<br>
     🧼 Clean the chaos<br>
     🙉 Train machine learning models<br>
-    🔮 Predict the future (almost)<br><br>
+    🔮 Predict the future (almost)<br>
 
     ⚠️ Warning: If you’re a Data Science student, your assignments might suddenly become a lot easier 😎
     <br>
@@ -312,7 +312,7 @@ Perfect for: Comparing quantities across different groups.
             ax.set_title("Correlation Heatmap")
             st.pyplot(fig)
      with mcol2:
-       st.image("./images/ML.jpg",width=200)
+       st.image("./images/ML.jpg",width=450)
        st.markdown("""
        <div style="font-size:14px; line-height:1.8;">
                    ⚠️ Heads up, data explorer! 😅<br>
@@ -452,5 +452,6 @@ st.markdown(
 
 
    
+
 
 

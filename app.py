@@ -11,7 +11,7 @@ st.header("👋 Welcome to Data Science App")
 column1,column2=st.columns([6,2])
 with column1:
     st.markdown("""
-    <div style="font-size:28px; line-height:1.8;">
+    <div style="font-size:22px; line-height:1.8;">
 
     <strong>The ultimate data playground!</strong><br>╰(\*° ▽ °\*)╯<br><br>
 
@@ -452,4 +452,5 @@ st.markdown(
 
 
    
+
 

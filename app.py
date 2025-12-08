@@ -312,7 +312,7 @@ Perfect for: Comparing quantities across different groups.
             ax.set_title("Correlation Heatmap")
             st.pyplot(fig)
      with mcol2:
-       st.image("./images/ML.jpg",width=600)
+       st.image("./images/ML.jpg",width=200)
        st.markdown("""
        <div style="font-size:18px; line-height:1.8;">
                    ⚠️ Heads up, data explorer! 😅<br>
@@ -449,5 +449,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
    

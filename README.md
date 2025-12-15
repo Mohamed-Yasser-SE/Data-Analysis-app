@@ -17,16 +17,18 @@
 ---
 
 ## 💡 Description
-A Streamlit web app that allows users to upload CSV files, clean data, select features, and visualize results interactively.
+A Streamlit web app that allows users to upload CSV files, clean data, select features, modeling your data, and visualize results interactively.
 
 ## ⚙️ Skills
-Python, Streamlit, Plotly, Pandas, NumPy, Data Cleaning, Feature Selection, Data Visualization, Web App Development
+Python, Streamlit, Plotly, Pandas, NumPy, Data Cleaning, Feature Selection, Data Visualization, Web App Development, Machine learning 
 
 ## 🚀 Features
-- CSV upload and preview  
+- CSV upload and preview
+- Feacture celection
 - Data cleaning and missing value handling  
-- Interactive charts and filters  
+- Interactive charts and filters
+- Modeling your data
 
 ## ▶️ How to Run
-```bash
-streamlit run app.py
+there is the link : https://data-sience-app-bbivwgvtxmuqwhrj8sdvlh.streamlit.app/
+or from the python file in the terminal : streamlit run app.py

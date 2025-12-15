@@ -1,4 +1,4 @@
-# 🧠 Data Sience Web App (In Progress)  
+# 🧠 Data Science Web App (In Progress)  
 
 ![Python](https://img.shields.io/badge/Python-Backend-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red?logo=streamlit)
